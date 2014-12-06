@@ -23,6 +23,11 @@ class Feedreader extends \yii\base\Widget
      * @var string the feed Url.
      */
     public $feedUrl;
+    
+    /**
+     * @var string the template file. This is the view that is rendered by the widget to show the feeds.
+     */
+    public $templateFile = 'default';
         
     public function init()
     {
@@ -32,9 +37,7 @@ class Feedreader extends \yii\base\Widget
 
     public function run()
     {
-        //$feed = \Yii::$app->feed->reader()->import($this->feedUrl);
-        $reader = new Reader();
-        $feed = $reader->import($this->feedUrl);
+        $feed = Reader::import($this->feedUrl);
 
         $data = array(
             'title' => $feed->getTitle(),
@@ -52,16 +55,13 @@ class Feedreader extends \yii\base\Widget
                 'dateModified' => $entry->getDateModified(),
                 'authors' => $entry->getAuthors(),
                 'link' => $entry->getLink(),
-                'content' => $entry->getContent()
+                'content' => $entry->getContent(),
             );
             $data['entries'][] = $edata;
         }
         
-        foreach($data['entries'] as $entry) {
-            echo '<h3>' . Html::encode($entry['title']) . '</h3>';
-            echo $entry['description'];
-        }
-
+        echo $this->render('default', ['data' => $data]);
+    
         // $this->registerClientScript();
     }
 
