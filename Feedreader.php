@@ -15,7 +15,7 @@ use yii\helpers\Html;
  * @author Klaus Mergen <klaus.mergen@web.de>
  * @since 1.0
  */
-class Feedreader extends yii\widgets\Widget
+class Feedreader extends \yii\widgets\Widget
 {
 
     public $feedUrl;
