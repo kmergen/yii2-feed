@@ -8,6 +8,7 @@
 namespace kmergen\feedreader;
 
 use yii\helpers\Html;
+use Zend\Feed\Reader\Reader;
 
 /**
  * Feedreader widget provides an RSS and Atom Reader.
@@ -31,7 +32,9 @@ class Feedreader extends \yii\base\Widget
 
     public function run()
     {
-        $feed = \Yii::$app->feed->reader()->import($this->feedUrl);
+        //$feed = \Yii::$app->feed->reader()->import($this->feedUrl);
+        $reader = new Reader();
+        $feed = $reader->import($this->feedUrl);
 
         $data = array(
             'title' => $feed->getTitle(),
