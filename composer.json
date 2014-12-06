@@ -1,0 +1,13 @@
+{
+    "name": "kmergen/yii2-feedreader",
+    "description": "A feedreader widget for Yii 2 applications",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+		"psr-4": {
+			"kmergen\\feadreader\\": ""
+		}
+	}
+    
+}
