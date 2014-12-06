@@ -1,13 +1,17 @@
 {
     "name": "kmergen/yii2-feedreader",
     "description": "A feedreader widget for Yii 2 applications",
+    "keywords": ["yii2", "extension", "rss", "atom", "feed"],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "zendframework/zend-feed": "2.3.*@dev",
+        "zendframework/zend-servicemanager": "2.3.*@dev",
+        "zendframework/zend-http": "2.3.*@dev"
     },
     "autoload": {
-		"psr-4": {
-			"kmergen\\feadreader\\": ""
-		}
-	}
-    
+        "psr-4": {
+            "kmergen\\feadreader\\": ""
+        }
+    }
+
 }
