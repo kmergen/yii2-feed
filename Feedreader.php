@@ -17,10 +17,12 @@ use yii\helpers\Html;
  */
 class Feedreader extends \yii\base\Widget
 {
-
+    
+    /**
+     * @var string the feed Url.
+     */
     public $feedUrl;
-    protected $feed;
-
+        
     public function init()
     {
         //At the moment we can only use http protocol
@@ -29,7 +31,7 @@ class Feedreader extends \yii\base\Widget
 
     public function run()
     {
-        $feed = Yii::$app->feed->reader()->import($this->feedUrl);
+        $feed = \Yii::$app->feed->reader()->import($this->feedUrl);
 
         $data = array(
             'title' => $feed->getTitle(),
@@ -54,7 +56,7 @@ class Feedreader extends \yii\base\Widget
         
         foreach($data['entries'] as $entry) {
             echo '<h3>' . Html::encode($entry['title']) . '</h3>';
-            echo Html::encode($entry['description']);
+            echo $entry['description'];
         }
 
         $this->registerClientScript();

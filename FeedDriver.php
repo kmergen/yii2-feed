@@ -7,7 +7,7 @@
  */
 
 
-namespace kmergen\feadreader;
+namespace kmergen\feedreader;
 
 use Yii;
 use yii\base\Component;
