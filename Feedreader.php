@@ -5,7 +5,7 @@
  * @version 1.1.0
  */
 
-namespace kmergen\feadreader;
+namespace kmergen\feedreader;
 
 use yii\helpers\Html;
 
