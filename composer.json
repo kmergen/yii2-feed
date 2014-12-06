@@ -1,6 +1,6 @@
 {
-    "name": "kmergen/yii2-feedreader",
-    "description": "A feedreader widget for Yii 2 applications",
+    "name": "kmergen/yii2-feed",
+    "description": "A feed widget for Yii 2 applications",
     "keywords": ["yii2", "extension", "rss", "atom", "feed"],
     "require": {
         "php": ">=5.4.0",
@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "kmergen\\feedreader\\": ""
+            "kmergen\\feed\\": ""
         }
     }
 
