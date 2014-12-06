@@ -5,7 +5,7 @@
  * @version 1.1.0
  */
 
-namespace kmergen\feedreader;
+namespace kmergen\feed;
 
 use yii\helpers\Html;
 use Zend\Feed\Reader\Reader;
@@ -62,7 +62,7 @@ class Feedreader extends \yii\base\Widget
             echo $entry['description'];
         }
 
-        $this->registerClientScript();
+        // $this->registerClientScript();
     }
 
     /**
