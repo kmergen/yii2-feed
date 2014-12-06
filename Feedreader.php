@@ -29,7 +29,7 @@ class Feedreader extends yii\widgets\Widget
 
     public function run()
     {
-        $this->feed = Yii::$app->feed->reader()->import($this->feedUrl);
+        $feed = Yii::$app->feed->reader()->import($this->feedUrl);
 
         $data = array(
             'title' => $feed->getTitle(),
