@@ -7,7 +7,6 @@
 
 namespace kmergen\feed;
 
-use yii\helpers\Html;
 use Zend\Feed\Reader\Reader;
 
 /**
